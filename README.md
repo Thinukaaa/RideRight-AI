@@ -3,6 +3,8 @@
 RideRight AI is a smart, AI-powered chatbot designed to assist users in selecting the perfect car based on their preferences, 
 budget, and brand interests. Built as part of a final-year Software Engineering coursework, the project combines natural language processing,
 machine learning, and a structured knowledge base to simulate a realistic auto sales assistant.
+![Screenshot 2025-04-24 211052](https://github.com/user-attachments/assets/9d2d8c42-7910-43a7-939a-0cf9beb0b8ab)
+
 
 🚗 Features
 Natural Language Interface – Chat with the bot using simple text queries like "Show me SUVs under $30,000" or "Which Toyota has the best mileage?"
