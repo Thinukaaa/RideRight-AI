@@ -1,0 +1,187 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["hello", "hi", "hey", "good morning", "what's up", "how are you"],
+        "responses": ["Hello! Ready to find the perfect car?", "Hi there! How can I assist you today?"]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["bye", "see you", "goodbye", "exit", "quit"],
+        "responses": ["Goodbye! Drive safe.", "See you soon!"]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["thanks", "thank you", "appreciate it", "cheers"],
+        "responses": ["You're welcome!", "Happy to help!", "Any time!"]
+      },
+      {
+        "tag": "car_recommendation",
+        "patterns": [
+          "I need a car",
+          "recommend a car",
+          "what car should I buy",
+          "I want a new car",
+          "suggest a good car"
+        ],
+        "responses": ["Sure! What's your budget and preferred brand?"]
+      },
+      {
+        "tag": "budget_filter",
+        "patterns": [
+          "cars under 30000",
+          "something below 20k",
+          "my budget is 25000",
+          "cars cheaper than 40000",
+          "low price cars"
+        ],
+        "responses": ["Got it. Let me show you cars within your budget."]
+      },
+      {
+        "tag": "brand_query",
+        "patterns": [
+          "I like Toyota",
+          "what about Honda",
+          "any BMWs",
+          "show me Nissan",
+          "I prefer Ford"
+        ],
+        "responses": ["Here are some great options from that brand."]
+      },
+      {
+        "tag": "car_type_query",
+        "patterns": [
+          "I want an SUV",
+          "show me sedans",
+          "do you have hatchbacks",
+          "I need a pickup truck"
+        ],
+        "responses": ["Here are some popular models in that category."]
+      },
+      {
+        "tag": "mileage_query",
+        "patterns": [
+          "best mileage cars",
+          "fuel efficient cars",
+          "low fuel consumption",
+          "cars with good economy"
+        ],
+        "responses": ["These cars have excellent fuel efficiency."]
+      },
+      {
+        "tag": "compare_cars",
+        "patterns": [
+          "compare Honda Civic and Toyota Corolla",
+          "what's better Civic or Corolla",
+          "compare two cars",
+          "side by side car comparison"
+        ],
+        "responses": ["Let me compare those models for you."]
+      },
+      {
+        "tag": "trade_in_value",
+        "patterns": [
+          "how much is my car worth",
+          "estimate my car's value",
+          "car trade-in estimator",
+          "I want to trade my car"
+        ],
+        "responses": ["I can help with that. What's your car's make, model, and mileage?"]
+      },
+      {
+        "tag": "dealer_query",
+        "patterns": [
+          "where can I buy this car",
+          "any dealers near me",
+          "find a nearby dealership",
+          "who sells this car"
+        ],
+        "responses": ["I can find nearby dealers for you."]
+      },
+      {
+        "tag": "financing_options",
+        "patterns": [
+          "do you offer financing",
+          "payment plans available?",
+          "can I pay in EMIs",
+          "what about car loans"
+        ],
+        "responses": ["Yes, let me show you the financing options available."]
+      },
+      {
+        "tag": "schedule_test_drive",
+        "patterns": [
+          "book a test drive",
+          "can I test drive a car",
+          "schedule drive",
+          "I want to try this car"
+        ],
+        "responses": ["Please provide your name and preferred date/time for the test drive."]
+      },
+      {
+        "tag": "contact_support",
+        "patterns": [
+          "need help",
+          "talk to support",
+          "technical issue",
+          "how can I contact you"
+        ],
+        "responses": ["Our support team is available 24/7. Would you like me to connect you now?"]
+      },
+      {
+        "tag": "unknown",
+        "patterns": [],
+        "responses": ["I'm not sure I understand that. Could you rephrase?", "Sorry, I didn't catch that."]
+      },
+      {
+        "tag": "creator_info",
+        "patterns": ["who made you", "who created you", "your creator", "who developed you"],
+        "responses": ["I was built by a final-year software engineering student using AI! Pretty cool, right?"]
+      },
+      {
+        "tag": "bot_identity",
+        "patterns": ["what are you", "who are you", "are you a robot", "are you AI"],
+        "responses": ["I'm RideRight AI – your smart car-buying assistant!"]
+      },
+      {
+        "tag": "wellbeing",
+        "patterns": ["how are you", "are you ok", "what's up"],
+        "responses": ["I'm running smoothly, thanks for asking! How can I help you today?"]
+      },
+      {
+        "tag": "joke",
+        "patterns": ["tell me a joke", "make me laugh", "say something funny"],
+        "responses": ["Why don't cars ever get tired? Because they come with their own spare tire! 😄"]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["thank you", "thanks", "cheers", "ok thanks", "cool", "appreciate it"],
+        "responses": ["You're welcome!", "Glad I could help!", "Any time!"]
+      },
+      {
+        "tag": "show_preferences",
+        "patterns": ["what are my preferences", "show my saved preferences", "what do you remember about me", "recall my preferences"],
+        "responses": ["Here’s what I remember about your car choices:"]
+      },      
+      {
+        "tag": "save_preference",
+        "patterns": [
+          "I like Honda sedans under 30000",
+          "remember I want an SUV",
+          "save my preference",
+          "my budget is 25k and I prefer electric",
+          "keep this in mind"
+        ],
+        "responses": ["Saving your preferences..."]
+      },
+      {
+        "tag": "who_are_you",
+        "patterns": ["who are you", "your name", "what's your name", "are you a bot"],
+        "responses": ["I’m Raya – your RideRight AI assistant. I'm here to help you find the car that fits *you* best!"]
+      }
+      
+      
+      
+    ]
+  }
+  

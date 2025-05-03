@@ -1,0 +1,5 @@
+spacy
+sqlite3
+nltk
+streamlit
+pyinstaller
