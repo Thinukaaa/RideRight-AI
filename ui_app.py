@@ -51,7 +51,7 @@ body {
 
 # --- Header ---
 st.markdown("### 🤖 Raya – Your Futuristic Auto Sales Assistant")
-st.caption("Ask me anything car-related — I'm here to help!")
+st.caption("Ask me anything car-related — I'm here to help you choose the best Ride for you!")
 
 # --- Chat Display ---
 with st.container():
@@ -61,8 +61,6 @@ with st.container():
 
         elif isinstance(message, dict) and message.get("format") == "grid":
             st.markdown(f"**{message['title']}**")
-            if message.get("filters"):
-                st.markdown(f"_Filter: {message['filters']}_")
             cars = message["cards"]
             num_cols = 2 if len(cars) < 4 else 3
             cols = st.columns(num_cols)
@@ -86,19 +84,17 @@ with st.form(key="chat_form", clear_on_submit=True):
 if submitted and user_input.strip():
     intent_data = process_input(user_input.strip())
 
-    for key in ["brand", "type", "fuel", "budget"]:
+    # Use prior context if needed
+    for key in ["brand", "type", "fuel", "budget", "min_budget", "max_budget"]:
         if key not in intent_data["entities"] and key in st.session_state.context:
             intent_data["entities"][key] = st.session_state.context[key]
 
+    # Save context
     st.session_state.context.update(intent_data["entities"])
-
     intent_data["text"] = user_input.strip()
+
     reply = get_response(intent_data)
 
+    # Append to chat history
     st.session_state.chat_history.append(("You", user_input.strip()))
     st.session_state.chat_history.append(("Raya", reply))
-
-# --- Debug Sidebar ---
-with st.sidebar.expander("🧠 Debug Info"):
-    st.subheader("Current Context")
-    st.json(st.session_state.context)
