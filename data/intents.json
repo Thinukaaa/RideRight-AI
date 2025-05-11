@@ -1,187 +1,437 @@
 {
-    "intents": [
-      {
-        "tag": "greeting",
-        "patterns": ["hello", "hi", "hey", "good morning", "what's up", "how are you"],
-        "responses": ["Hello! Ready to find the perfect car?", "Hi there! How can I assist you today?"]
-      },
-      {
-        "tag": "goodbye",
-        "patterns": ["bye", "see you", "goodbye", "exit", "quit"],
-        "responses": ["Goodbye! Drive safe.", "See you soon!"]
-      },
-      {
-        "tag": "thanks",
-        "patterns": ["thanks", "thank you", "appreciate it", "cheers"],
-        "responses": ["You're welcome!", "Happy to help!", "Any time!"]
-      },
-      {
-        "tag": "car_recommendation",
-        "patterns": [
-          "I need a car",
-          "recommend a car",
-          "what car should I buy",
-          "I want a new car",
-          "suggest a good car"
-        ],
-        "responses": ["Sure! What's your budget and preferred brand?"]
-      },
-      {
-        "tag": "budget_filter",
-        "patterns": [
-          "cars under 30000",
-          "something below 20k",
-          "my budget is 25000",
-          "cars cheaper than 40000",
-          "low price cars"
-        ],
-        "responses": ["Got it. Let me show you cars within your budget."]
-      },
-      {
-        "tag": "brand_query",
-        "patterns": [
-          "I like Toyota",
-          "what about Honda",
-          "any BMWs",
-          "show me Nissan",
-          "I prefer Ford"
-        ],
-        "responses": ["Here are some great options from that brand."]
-      },
-      {
-        "tag": "car_type_query",
-        "patterns": [
-          "I want an SUV",
-          "show me sedans",
-          "do you have hatchbacks",
-          "I need a pickup truck"
-        ],
-        "responses": ["Here are some popular models in that category."]
-      },
-      {
-        "tag": "mileage_query",
-        "patterns": [
-          "best mileage cars",
-          "fuel efficient cars",
-          "low fuel consumption",
-          "cars with good economy"
-        ],
-        "responses": ["These cars have excellent fuel efficiency."]
-      },
-      {
-        "tag": "compare_cars",
-        "patterns": [
-          "compare Honda Civic and Toyota Corolla",
-          "what's better Civic or Corolla",
-          "compare two cars",
-          "side by side car comparison"
-        ],
-        "responses": ["Let me compare those models for you."]
-      },
-      {
-        "tag": "trade_in_value",
-        "patterns": [
-          "how much is my car worth",
-          "estimate my car's value",
-          "car trade-in estimator",
-          "I want to trade my car"
-        ],
-        "responses": ["I can help with that. What's your car's make, model, and mileage?"]
-      },
-      {
-        "tag": "dealer_query",
-        "patterns": [
-          "where can I buy this car",
-          "any dealers near me",
-          "find a nearby dealership",
-          "who sells this car"
-        ],
-        "responses": ["I can find nearby dealers for you."]
-      },
-      {
-        "tag": "financing_options",
-        "patterns": [
-          "do you offer financing",
-          "payment plans available?",
-          "can I pay in EMIs",
-          "what about car loans"
-        ],
-        "responses": ["Yes, let me show you the financing options available."]
-      },
-      {
-        "tag": "schedule_test_drive",
-        "patterns": [
-          "book a test drive",
-          "can I test drive a car",
-          "schedule drive",
-          "I want to try this car"
-        ],
-        "responses": ["Please provide your name and preferred date/time for the test drive."]
-      },
-      {
-        "tag": "contact_support",
-        "patterns": [
-          "need help",
-          "talk to support",
-          "technical issue",
-          "how can I contact you"
-        ],
-        "responses": ["Our support team is available 24/7. Would you like me to connect you now?"]
-      },
-      {
-        "tag": "unknown",
-        "patterns": [],
-        "responses": ["I'm not sure I understand that. Could you rephrase?", "Sorry, I didn't catch that."]
-      },
-      {
-        "tag": "creator_info",
-        "patterns": ["who made you", "who created you", "your creator", "who developed you"],
-        "responses": ["I was built by a final-year software engineering student using AI! Pretty cool, right?"]
-      },
-      {
-        "tag": "bot_identity",
-        "patterns": ["what are you", "who are you", "are you a robot", "are you AI"],
-        "responses": ["I'm RideRight AI – your smart car-buying assistant!"]
-      },
-      {
-        "tag": "wellbeing",
-        "patterns": ["how are you", "are you ok", "what's up"],
-        "responses": ["I'm running smoothly, thanks for asking! How can I help you today?"]
-      },
-      {
-        "tag": "joke",
-        "patterns": ["tell me a joke", "make me laugh", "say something funny"],
-        "responses": ["Why don't cars ever get tired? Because they come with their own spare tire! 😄"]
-      },
-      {
-        "tag": "thanks",
-        "patterns": ["thank you", "thanks", "cheers", "ok thanks", "cool", "appreciate it"],
-        "responses": ["You're welcome!", "Glad I could help!", "Any time!"]
-      },
-      {
-        "tag": "show_preferences",
-        "patterns": ["what are my preferences", "show my saved preferences", "what do you remember about me", "recall my preferences"],
-        "responses": ["Here’s what I remember about your car choices:"]
-      },      
-      {
-        "tag": "save_preference",
-        "patterns": [
-          "I like Honda sedans under 30000",
-          "remember I want an SUV",
-          "save my preference",
-          "my budget is 25k and I prefer electric",
-          "keep this in mind"
-        ],
-        "responses": ["Saving your preferences..."]
-      },
-      {
-        "tag": "who_are_you",
-        "patterns": ["who are you", "your name", "what's your name", "are you a bot"],
-        "responses": ["I’m Raya – your RideRight AI assistant. I'm here to help you find the car that fits *you* best!"]
-      }
-      
-      
-      
-    ]
-  }
-  
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hello", "hi", "hey", "good morning", "what's up", "how are you"],
+      "responses": ["Hello! Ready to find the perfect car?", "Hi there! How can I assist you today?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "see you", "goodbye", "exit", "quit"],
+      "responses": ["Goodbye! Drive safe.", "See you soon!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thanks", "thank you", "appreciate it", "cheers"],
+      "responses": ["You're welcome!", "Happy to help!", "Any time!"]
+    },
+    {
+      "tag": "car_recommendation",
+      "patterns": [
+        "I need a car",
+        "recommend a car",
+        "what car should I buy",
+        "I want a new car",
+        "suggest a good car"
+      ],
+      "responses": ["Sure! What's your budget and preferred brand?"]
+    },
+    {
+      "tag": "budget_filter",
+      "patterns": [
+        "cars under 30000",
+        "something below 20k",
+        "my budget is 25000",
+        "cars cheaper than 40000",
+        "low price cars"
+      ],
+      "responses": ["Got it. Let me show you cars within your budget."]
+    },
+    {
+      "tag": "brand_query",
+      "patterns": [
+        "I like Toyota",
+        "what about Honda",
+        "any BMWs",
+        "show me Nissan",
+        "I prefer Ford"
+      ],
+      "responses": ["Here are some great options from that brand."]
+    },
+    {
+      "tag": "car_type_query",
+      "patterns": [
+        "I want an SUV",
+        "show me sedans",
+        "do you have hatchbacks",
+        "I need a pickup truck"
+      ],
+      "responses": ["Here are some popular models in that category."]
+    },
+    {
+      "tag": "mileage_query",
+      "patterns": [
+        "best mileage cars",
+        "fuel efficient cars",
+        "low fuel consumption",
+        "cars with good economy"
+      ],
+      "responses": ["These cars have excellent fuel efficiency."]
+    },
+    {
+      "tag": "compare_cars",
+      "patterns": [
+        "compare Honda Civic and Toyota Corolla",
+        "what's better Civic or Corolla",
+        "compare two cars",
+        "side by side car comparison"
+      ],
+      "responses": ["Let me compare those models for you."]
+    },
+    {
+      "tag": "trade_in_value",
+      "patterns": [
+        "how much is my car worth",
+        "estimate my car's value",
+        "car trade-in estimator",
+        "I want to trade my car"
+      ],
+      "responses": ["I can help with that. What's your car's make, model, and mileage?"]
+    },
+    {
+      "tag": "dealer_query",
+      "patterns": [
+        "where can I buy this car",
+        "any dealers near me",
+        "find a nearby dealership",
+        "who sells this car"
+      ],
+      "responses": ["I can find nearby dealers for you."]
+    },
+    {
+      "tag": "financing_options",
+      "patterns": [
+        "do you offer financing",
+        "payment plans available?",
+        "can I pay in EMIs",
+        "what about car loans"
+      ],
+      "responses": ["Yes, let me show you the financing options available."]
+    },
+    {
+      "tag": "schedule_test_drive",
+      "patterns": [
+        "book a test drive",
+        "can I test drive a car",
+        "schedule drive",
+        "I want to try this car"
+      ],
+      "responses": ["Please provide your name and preferred date/time for the test drive."]
+    },
+    {
+      "tag": "contact_support",
+      "patterns": [
+        "need help",
+        "talk to support",
+        "technical issue",
+        "how can I contact you"
+      ],
+      "responses": ["Our support team is available 24/7. Would you like me to connect you now?"]
+    },
+    {
+      "tag": "unknown",
+      "patterns": [],
+      "responses": ["I'm not sure I understand that. Could you rephrase?", "Sorry, I didn't catch that."]
+    },
+    {
+      "tag": "creator_info",
+      "patterns": ["who made you", "who created you", "your creator", "who developed you"],
+      "responses": ["I was built by a final-year software engineering student using AI! Pretty cool, right?"]
+    },
+    {
+      "tag": "bot_identity",
+      "patterns": ["what are you", "who are you", "are you a robot", "are you AI"],
+      "responses": ["I'm RideRight AI – your smart car-buying assistant!"]
+    },
+    {
+      "tag": "wellbeing",
+      "patterns": ["how are you", "are you ok", "what's up"],
+      "responses": ["I'm running smoothly, thanks for asking! How can I help you today?"]
+    },
+    {
+      "tag": "joke",
+      "patterns": ["tell me a joke", "make me laugh", "say something funny"],
+      "responses": ["Why don't cars ever get tired? Because they come with their own spare tire! 😄"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thank you", "thanks", "cheers", "ok thanks", "cool", "appreciate it"],
+      "responses": ["You're welcome!", "Glad I could help!", "Any time!"]
+    },
+    {
+      "tag": "show_preferences",
+      "patterns": ["what are my preferences", "show my saved preferences", "what do you remember about me", "recall my preferences"],
+      "responses": ["Here’s what I remember about your car choices:"]
+    },      
+    {
+      "tag": "save_preference",
+      "patterns": [
+        "I like Honda sedans under 30000",
+        "remember I want an SUV",
+        "save my preference",
+        "my budget is 25k and I prefer electric",
+        "keep this in mind"
+      ],
+      "responses": ["Saving your preferences..."]
+    },
+    {
+      "tag": "who_are_you",
+      "patterns": ["who are you", "your name", "what's your name", "are you a bot"],
+      "responses": ["I’m Raya – your RideRight AI assistant. I'm here to help you find the car that fits *you* best!"]
+    }
+    ,
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "good morning",
+        "good evening",
+        "hi there",
+        "what's up"
+      ],
+      "responses": ["Hi! I'm Raya – your RideRight assistant. How can I help you find the perfect car today?"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "thx",
+        "ok thanks",
+        "cheers",
+        "appreciate it"
+      ],
+      "responses": ["You're welcome!", "Glad to help!", "Anytime!", "Let me know if you need anything else."]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "see you",
+        "goodbye",
+        "exit",
+        "quit"
+      ],
+      "responses": ["Take care! Hope you find your perfect ride.", "Goodbye from Raya!"]
+    },
+    {
+      "tag": "budget_filter",
+      "patterns": [
+        "show me cars under 30000",
+        "find a car below 20000",
+        "what can I buy for 15000",
+        "cheap cars",
+        "affordable cars",
+        "budget cars"
+      ],
+      "responses": ["Here are some great picks under your budget:"]
+    },
+    {
+      "tag": "car_recommendation",
+      "patterns": [
+        "recommend me a car",
+        "suggest a car",
+        "I need a new car",
+        "which car should I buy",
+        "find me a car",
+        "help me choose a car"
+      ],
+      "responses": ["Let me find some great options based on your needs."]
+    },
+    {
+      "tag": "car_type_query",
+      "patterns": [
+        "show me SUVs",
+        "I want a sedan",
+        "find hatchbacks",
+        "do you have any trucks",
+        "list coupes"
+      ],
+      "responses": ["Looking up cars in that category..."]
+    },
+    {
+      "tag": "brand_query",
+      "patterns": [
+        "show me Toyota cars",
+        "what Honda cars do you have",
+        "list BMW models",
+        "Ford cars",
+        "do you have Tesla vehicles"
+      ],
+      "responses": ["Here are some models from that brand:"]
+    },
+    {
+      "tag": "compare_cars",
+      "patterns": [
+        "compare Civic and Corolla",
+        "what's better Civic or Corolla",
+        "difference between Tesla and Ford",
+        "compare Elantra vs Accent",
+        "Civic vs Corolla"
+      ],
+      "responses": ["Here’s a quick side-by-side:"]
+    },
+    {
+      "tag": "dealer_query",
+      "patterns": [
+        "where can I find a Toyota dealer",
+        "dealers for Ford",
+        "show me dealers",
+        "is there a Honda showroom",
+        "Tesla dealership info"
+      ],
+      "responses": ["Here are some nearby dealers:"]
+    },
+    {
+      "tag": "trade_in_value",
+      "patterns": [
+        "my 2015 car with 85000 miles",
+        "how much is my old car worth",
+        "value of my 2010 car",
+        "estimate my trade-in",
+        "what can I get for my car"
+      ],
+      "responses": ["Let me calculate an estimate based on mileage and age."]
+    },
+    {
+      "tag": "save_preference",
+      "patterns": [
+        "remember my preferences",
+        "save my car settings",
+        "I like Toyota sedans under 20000",
+        "keep this preference"
+      ],
+      "responses": ["Got it! I’ve saved your preferences."]
+    },
+    {
+      "tag": "show_preferences",
+      "patterns": [
+        "what are my preferences",
+        "show my saved settings",
+        "my saved car options",
+        "recall my preferences"
+      ],
+      "responses": ["Here’s what I remember about your preferences:"]
+    },
+    {
+      "tag": "unknown",
+      "patterns": [
+        "do aliens drive cars",
+        "what’s the weather",
+        "can you cook",
+        "tell me a joke"
+      ],
+      "responses": ["Sorry, I didn’t get that. Can you rephrase?"]
+    },
+    {
+      "tag": "car_features_filter",
+      "patterns": [
+        "show me electric cars",
+        "I want a petrol SUV",
+        "automatic transmission cars",
+        "list hybrid sedans",
+        "any 5-seater electric vehicles"
+      ],
+      "responses": ["Let me find cars that match those features..."]
+    },
+    {
+      "tag": "car_usage",
+      "patterns": [
+        "I need a car for city driving",
+        "best car for long distance",
+        "good car for daily commute",
+        "recommend an efficient car"
+      ],
+      "responses": ["Here are cars that match your usage preference:"]
+    },
+    {
+      "tag": "vehicle_size",
+      "patterns": [
+        "show me small cars",
+        "I want a large SUV",
+        "compact vehicles",
+        "full size sedans",
+        "tiny hatchbacks"
+      ],
+      "responses": ["Here are some options based on size:"]
+    },
+    {
+      "tag": "vehicle_purpose",
+      "patterns": [
+        "I need a family car",
+        "something good for students",
+        "business class sedan",
+        "eco-friendly cars",
+        "cars for beginners"
+      ],
+      "responses": ["Let me find something suitable for that purpose."]
+    },
+    {
+      "tag": "financing_query",
+      "patterns": [
+        "do you offer financing?",
+        "can I buy on installments?",
+        "EMI plans?",
+        "how about monthly payments"
+      ],
+      "responses": ["Currently I can help you find the right car — financing support is coming soon!"]
+    },
+    {
+      "tag": "bot_capabilities",
+      "patterns": [
+        "what can you do?",
+        "how can you help me?",
+        "who are you?",
+        "what is RideRight AI?"
+      ],
+      "responses": [
+        "I’m Raya, your car-buying assistant! I can help you compare cars, find models based on your needs, estimate trade-in value, and more."
+      ]
+    },
+    {
+      "tag": "repeat_request",
+      "patterns": [
+        "can you repeat that?",
+        "say that again",
+        "repeat the list",
+        "what did you say?"
+      ],
+      "responses": ["Sure! Here's that again:"]
+    },
+    {
+      "tag": "clarification",
+      "patterns": [
+        "I meant Toyota",
+        "no, I said sedan",
+        "change that to hybrid",
+        "not that one"
+      ],
+      "responses": ["Got it! Updating your request..."]
+    },
+    {
+      "tag": "emotion_positive",
+      "patterns": [
+        "awesome",
+        "great!",
+        "perfect",
+        "you’re smart",
+        "nice work"
+      ],
+      "responses": ["Thank you! I'm glad I could help."]
+    },
+    {
+      "tag": "emotion_negative",
+      "patterns": [
+        "this is dumb",
+        "you're wrong",
+        "useless",
+        "not helpful",
+        "bad bot"
+      ],
+      "responses": ["I'm still learning — thanks for your patience!"]
+    }
+    
+  ]
+}

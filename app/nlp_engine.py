@@ -1,57 +1,94 @@
 import json
 import re
 import spacy
+import difflib
+import streamlit as st
 
-# Load spaCy NLP model
 nlp = spacy.load("en_core_web_sm")
 
-# Load intents
-with open("data/intents.json", "r") as file:
+with open("data/intents.json", "r", encoding="utf-8") as file:
     intents = json.load(file)["intents"]
 
-# Define known entities
-CAR_BRANDS = ["Toyota", "Honda", "Ford", "BMW", "Tesla", "Hyundai", "Nissan"]
-CAR_TYPES = ["SUV", "Sedan", "Hatchback", "Truck"]
-CAR_MODELS = ["Corolla", "Civic", "Escape", "Leaf", "X3", "Elantra", "Model 3"]
+CAR_BRANDS = ["Toyota", "Honda", "Ford", "BMW", "Tesla", "Hyundai", "Nissan", "Chevrolet", "Kia"]
+CAR_TYPES = ["SUV", "Sedan", "Hatchback", "Truck", "Coupe", "Convertible"]
+FUEL_TYPES = ["petrol", "diesel", "electric", "hybrid"]
+TRANSMISSIONS = ["manual", "automatic", "auto"]
+SEATING_PATTERNS = [r"(\d)[ -]?seater", r"seating for (\d+)", r"(\d)\s?seats"]
+
+TYPE_SYNONYMS = {
+    "sedan": ["sedan", "saloon"],
+    "hatchback": ["hatchback", "compact"],
+    "suv": ["suv", "jeep", "4x4"]
+}
+
+def fuzzy_match(word, options, cutoff=0.75):
+    matches = difflib.get_close_matches(word.lower(), [opt.lower() for opt in options], n=1, cutoff=cutoff)
+    if matches:
+        return next((opt for opt in options if opt.lower() == matches[0]), None)
+    return None
 
 def extract_entities(text):
     doc = nlp(text)
+    text_lower = text.lower()
     entities = {}
 
-    # Named Entity Recognition (spaCy)
+    if "under" in text_lower or "less than" in text_lower:
+        match = re.search(r"(\d{1,3})(k|K)", text_lower)
+        if match:
+            entities["max_budget"] = int(match.group(1)) * 1000
+    elif "over" in text_lower or "more than" in text_lower:
+        match = re.search(r"(\d{1,3})(k|K)", text_lower)
+        if match:
+            entities["min_budget"] = int(match.group(1)) * 1000
+
     for ent in doc.ents:
-        if ent.label_ == "ORG" and ent.text in CAR_BRANDS:
-            entities["brand"] = ent.text
-        elif ent.label_ == "DATE" and "20" in ent.text:
-            try:
-                entities["year"] = int(re.search(r'20\d{2}', ent.text).group())
-            except:
-                pass
+        if ent.label_ == "ORG":
+            brand = fuzzy_match(ent.text, CAR_BRANDS)
+            if brand:
+                entities["brand"] = brand
         elif ent.label_ == "CARDINAL":
             try:
-                val = int(ent.text.replace(',', ''))
-                if 1000 < val < 1000000:
+                val = int(ent.text.replace(",", ""))
+                if "under" in text_lower or "less than" in text_lower:
+                    entities["max_budget"] = val
+                elif "over" in text_lower or "more than" in text_lower:
+                    entities["min_budget"] = val
+                elif 10000 < val < 10000000:
                     entities["budget"] = val
-                elif val < 100000:  # assume mileage
+                elif val < 100000:
                     entities["mileage"] = val
             except:
                 pass
+        elif ent.label_ == "DATE" and "20" in ent.text:
+            match = re.search(r'20\d{2}', ent.text)
+            if match:
+                entities["year"] = int(match.group())
 
-    # Manual matching (for type/model fallback)
-    for brand in CAR_BRANDS:
-        if brand.lower() in text.lower():
-            entities["brand"] = brand
+    for word in text_lower.split():
+        if "brand" not in entities:
+            match = fuzzy_match(word, CAR_BRANDS)
+            if match:
+                entities["brand"] = match
 
-    for ctype in CAR_TYPES:
-        if ctype.lower() in text.lower():
-            entities["type"] = ctype
+    for formal, synonyms in TYPE_SYNONYMS.items():
+        if any(syn in text_lower for syn in synonyms):
+            entities["type"] = formal.lower()
 
-    for model in CAR_MODELS:
-        if model.lower() in text.lower():
-            if "model" in entities:
-                entities["model2"] = model
-            else:
-                entities["model"] = model
+    for fuel in FUEL_TYPES:
+        if fuel in text_lower:
+            entities["fuel"] = fuel
+
+    for trans in TRANSMISSIONS:
+        if trans in text_lower:
+            entities["transmission"] = "automatic" if "auto" in trans else trans
+
+    for pattern in SEATING_PATTERNS:
+        match = re.search(pattern, text_lower)
+        if match:
+            try:
+                entities["seats"] = int(match.group(1))
+            except:
+                continue
 
     return entities
 
@@ -61,41 +98,52 @@ def match_intent(text):
     highest_score = 0
 
     synonyms = {
-        "budget_filter": ["cheap", "affordable", "under", "below", "less than"],
-        "car_recommendation": ["suggest", "recommend", "good car"],
-        "thanks": ["thanks", "thank you", "ok", "cool", "cheers", "appreciate it"],
-        "dealer_query": ["dealers", "showroom", "where to buy", "find dealer", "nearby dealer"],
-        "compare_cars": ["compare", "difference between", "vs", "better car"],
+        "budget_filter": ["cheap", "affordable", "under", "less than", "over", "more than", "cost"],
+        "car_recommendation": ["recommend", "suggest", "what car", "good car", "show cars", "need a car"],
+        "thanks": ["thanks", "thank you", "ok", "cool", "cheers"],
+        "dealer_query": ["dealer", "where to buy", "showroom"],
+        "compare_cars": ["compare", "versus", "vs", "difference"],
         "greeting": ["hi", "hello", "hey", "good morning"]
     }
 
     for intent in intents:
-        base_score = 0
         for pattern in intent["patterns"]:
-            words = pattern.lower().split()
-            score = sum(1 for word in words if word in text) / len(words)
-            base_score = max(base_score, score)
+            score = sum(1 for word in pattern.lower().split() if word in text) / len(pattern.split())
+            if score > highest_score and score > 0.4:
+                best_match = intent
+                highest_score = score
 
-        # Bonus score if synonym detected
         for syn_intent, syn_list in synonyms.items():
-            if syn_intent == intent["tag"]:
-                if any(syn in text for syn in syn_list):
-                    base_score += 0.4
-
-        if base_score > highest_score and base_score > 0.4:
-            best_match = intent
-            highest_score = base_score
+            if syn_intent == intent["tag"] and any(word in text for word in syn_list):
+                highest_score += 0.3
+                best_match = intent
 
     return best_match
 
-
 def process_input(user_input):
     entities = extract_entities(user_input)
+
+    if "chat_context" not in st.session_state:
+        st.session_state.chat_context = {}
+
+    for key in ["brand", "type", "fuel", "budget", "max_budget", "min_budget"]:
+        if key not in entities and key in st.session_state.chat_context:
+            entities[key] = st.session_state.chat_context[key]
+
+    for key in ["brand", "type", "fuel", "budget", "max_budget", "min_budget"]:
+        if key in entities:
+            st.session_state.chat_context[key] = entities[key]
+
+    intent = match_intent(user_input)
     intent = match_intent(user_input)
 
-    # Priority override if car type is detected
-    if "type" in entities:
-        intent = {"tag": "car_type_query", "responses": ["Let me show you cars in that category."]}
+# Smart override logic
+    if "brand" in entities:
+        intent = {"tag": "brand_query", "responses": ["Here are some models from that brand:"]}
+    elif "type" in entities:
+        intent = {"tag": "car_type_query", "responses": ["Looking up cars in that category..."]}
+    elif "fuel" in entities or "transmission" in entities or "seats" in entities:
+        intent = {"tag": "car_features_filter", "responses": ["Let me find cars that match those features..."]}
 
     return {
         "intent": intent["tag"],
@@ -103,6 +151,3 @@ def process_input(user_input):
         "entities": entities,
         "text": user_input
     }
-    if intent["tag"] == "unknown":
-     with open("logs/unknown_queries.txt", "a", encoding="utf-8") as f:
-        f.write(user_input.strip() + "\n")

@@ -1,0 +1,250 @@
+brand,model,type,price,fuel_type,mileage,year,transmission,seats
+Maruti,Swift Dzire VDI,car,450000,Diesel,145500,2014,Manual,5
+Skoda,Rapid 1.5 TDI Ambition,sedan,370000,Diesel,120000,2014,Manual,5
+Honda,City 2017-2020 EXi,sedan,158000,Petrol,140000,2006,Manual,5
+Hyundai,i20 Sportz Diesel,sedan,225000,Diesel,127000,2010,Manual,5
+Maruti,Swift VXI BSIII,hashback,130000,Petrol,120000,2007,Manual,5
+Hyundai,Xcent 1.2 VTVT E Plus,sedan,440000,Petrol,45000,2017,Manual,5
+Maruti,Wagon R LXI DUO BSIII,sedan,96000,LPG,175000,2007,Manual,5
+Maruti,800 DX BSII,suv,45000,Petrol,5000,2001,Manual,4
+Toyota,Etios VXD,suv,350000,Diesel,90000,2011,Manual,5
+Ford,Figo Diesel Celebration Edition,sedan,200000,Diesel,169000,2013,Manual,5
+Renault,Duster 110PS Diesel RxL,suv,500000,Diesel,68000,2014,Manual,5
+Maruti,Zen LX,sedan,92000,Petrol,100000,2005,Manual,5
+Maruti,Swift Dzire VDi,sedan,280000,Diesel,140000,2009,Manual,5
+Maruti,Swift 1.3 VXi,suv,200000,Petrol,80000,2007,Manual,5
+Maruti,Wagon R LXI Minor,suv,180000,Petrol,90000,2009,Manual,5
+Mahindra,KUV 100 mFALCON G80 K8 5str,sedan,400000,Petrol,40000,2016,Manual,5
+Maruti,Ertiga SHVS VDI,suv,778000,Diesel,70000,2016,Manual,7
+Hyundai,i20 1.4 CRDi Asta,sedan,500000,Diesel,53000,2012,Manual,5
+Maruti,Alto LX,sedan,150000,Petrol,80000,2002,Manual,5
+Hyundai,i20 2015-2017 Asta 1.4 CRDi,suv,680000,Diesel,100000,2016,Manual,5
+Mahindra,Verito 1.5 D4 BSIII,sedan,174000,Diesel,100000,2011,Manual,5
+Honda,WR-V i-DTEC VX,sedan,950000,Diesel,50000,2017,Manual,5
+Maruti,Swift Dzire ZDI,sedan,525000,Diesel,40000,2015,Manual,5
+Maruti,SX4 ZDI,sedan,600000,Diesel,72000,2012,Manual,5
+Tata,Tigor 2017-2020 XZ,suv,500000,Petrol,35000,2018,Manual,5
+Maruti,Baleno Delta 1.2,suv,575000,Petrol,45000,2016,Manual,5
+Maruti,Alto 800 LXI,suv,275000,Petrol,28000,2017,Manual,5
+Chevrolet,Enjoy TCDi LTZ 7 Seater,suv,300000,Diesel,70000,2013,Manual,7
+Maruti,Wagon R LXI Minor,sedan,220000,Petrol,120000,2009,Manual,5
+Maruti,Omni E MPI STD BS IV,sedan,254999,Petrol,25000,2018,Manual,8
+Maruti,Vitara Brezza LDi Option,sedan,670000,Diesel,70000,2017,Manual,5
+Fiat,Palio 1.2 ELX,sedan,70000,Petrol,50000,2003,Manual,5
+Maruti,Omni 8 Seater BSIV,suv,150000,Petrol,35000,2012,Manual,5
+Hyundai,i20 1.2 Asta Dual Tone,sedan,730000,Petrol,2388,2018,Manual,5
+Hyundai,Verna VTVT 1.6 SX Option,suv,1149000,Petrol,5000,2019,Manual,5
+Datsun,GO D,sedan,150000,Petrol,42000,2016,Manual,5
+Tata,Safari DICOR 2.2 LX 4x2,sedan,425000,Diesel,60000,2011,Manual,7
+Maruti,800 Std,suv,150000,Petrol,76000,2012,Manual,4
+Jeep,Compass 1.4 Limited Plus BSIV,suv,2100000,Petrol,5000,2019,Automatic,5
+Toyota,Fortuner 4x4 MT,suv,1500000,Diesel,77000,2014,Manual,7
+Toyota,Innova 2.5 G (Diesel) 7 Seater BS IV,sedan,700000,Diesel,99000,2013,Manual,7
+Mercedes-Benz,B Class B180,sedan,1450000,Diesel,27800,2014,Automatic,5
+Honda,Amaze S Diesel,sedan,425000,Diesel,49800,2015,Manual,5
+Mitsubishi,Pajero Sport 4X4,sedan,1090000,Diesel,151000,2013,Manual,7
+Honda,City i DTEC S,suv,600000,Diesel,54700,2015,Manual,5
+Maruti,Ciaz Zeta,sedan,850000,Petrol,64000,2018,Manual,5
+Honda,Jazz VX Diesel,suv,525000,Diesel,63000,2015,Manual,5
+Toyota,Innova Crysta 2.8 ZX AT BSIV,sedan,1650000,Diesel,127700,2016,Automatic,7
+Toyota,Innova 2.5 G (Diesel) 7 Seater,sedan,950000,Diesel,99000,2016,Manual,7
+Audi,A6 2.0 TDI Technology,suv,1750000,Diesel,33900,2013,Automatic,5
+Toyota,Corolla Altis 1.8 VL CVT,suv,1590000,Petrol,25000,2018,Automatic,5
+Audi,A6 2.0 TDI  Design Edition,suv,1689999,Diesel,50000,2013,Automatic,5
+Mercedes-Benz,New C-Class 220 CDI AT,sedan,1425000,Diesel,59000,2013,Automatic,5
+Tata,Manza ELAN Quadrajet BS IV,sedan,265000,Diesel,120000,2011,Manual,5
+Hyundai,i10 Magna,sedan,190000,Petrol,110000,2011,Manual,5
+Hyundai,i20 Asta 1.4 CRDi,sedan,425000,Diesel,60000,2013,Manual,5
+Maruti,Swift Dzire ZDI,suv,630000,Diesel,147000,2015,Manual,5
+Ford,Figo 1.2P Titanium MT,sedan,600000,Petrol,25000,2017,Manual,5
+Maruti,Baleno Delta 1.2,suv,650000,Petrol,30000,2019,Manual,5
+Volkswagen,Ameo 1.5 TDI Highline 16 Alloy,sedan,540000,Diesel,40000,2016,Manual,5
+Honda,City i DTEC VX,sedan,630000,Diesel,135000,2015,Manual,5
+Maruti,Wagon R AMT VXI,suv,448000,Petrol,30000,2018,Automatic,5
+Volkswagen,Ameo 1.5 TDI Comfortline,suv,500000,Diesel,80000,2017,Manual,5
+Hyundai,i10 Magna,suv,235000,Petrol,60000,2011,Manual,5
+Toyota,Fortuner 4x4 MT,sedan,1700000,Diesel,78000,2015,Manual,7
+Maruti,Ertiga ZXI,sedan,450000,Petrol,120000,2012,Manual,7
+Tata,Indica DLS,sedan,50000,Diesel,70000,2003,Manual,5
+Volkswagen,Vento Diesel Highline,sedan,450000,Diesel,170000,2013,Manual,5
+Toyota,Innova 2.5 VX (Diesel) 8 Seater,suv,1200000,Diesel,140000,2016,Manual,8
+Ford,EcoSport 1.5 TDCi Titanium Plus BSIV,sedan,610000,Diesel,90000,2015,Manual,5
+BMW,X1 sDrive20i xLine,suv,2500000,Petrol,30000,2016,Automatic,5
+Maruti,Celerio ZXI MT BSIV,sedan,484999,Petrol,10000,2017,Manual,5
+Datsun,GO A Petrol,sedan,275000,Petrol,49000,2016,Manual,5
+Hyundai,i10 Era 1.1,suv,290000,Petrol,28000,2012,Manual,5
+Volkswagen,Polo 1.2 MPI Comfortline,suv,455000,Petrol,42000,2015,Manual,5
+Hyundai,i10 Magna 1.1L,suv,351000,Petrol,45000,2015,Manual,5
+Volkswagen,Vento Petrol Highline,sedan,535000,Petrol,12000,2012,Manual,5
+Maruti,Wagon R VXI,sedan,185000,Petrol,77000,2009,Manual,5
+Tata,Manza Aura (ABS) Quadrajet,sedan,200000,Diesel,100000,2010,Manual,5
+Mahindra,Scorpio VLX AT AIRBAG BSIV,sedan,625000,Diesel,70000,2014,Automatic,8
+Ford,Freestyle Titanium Petrol BSIV,suv,400000,Petrol,5000,2020,Manual,5
+Hyundai,Verna VTVT 1.6 SX,sedan,866000,Petrol,37800,2017,Manual,5
+Volkswagen,Passat 1.8 TSI MT,suv,700000,Petrol,114000,2010,Manual,5
+Tata,Indica Vista Aura 1.2 Safire (ABS) BS IV,sedan,300000,Petrol,48000,2010,Manual,5
+Mahindra,XUV500 W11 Option AWD,sedan,1700000,Diesel,32000,2019,Manual,7
+Tata,Indigo CS LS (TDI) BS-III,suv,375000,Diesel,100000,2016,Manual,5
+Hyundai,Verna 1.6 SX,suv,522000,Diesel,150000,2013,Manual,5
+Hyundai,i20 Magna 1.4 CRDi (Diesel),suv,451999,Diesel,69000,2013,Manual,5
+Toyota,Corolla Altis G,sedan,300000,Petrol,100000,2009,Manual,5
+Nissan,Terrano XL 85 PS,sedan,400000,Diesel,70000,2014,Manual,5
+Hyundai,Creta 1.6 CRDi SX,sedan,1140000,Diesel,50000,2016,Manual,5
+Ford,EcoSport 1.5 Diesel Titanium Plus BSIV,sedan,850000,Diesel,76139,2017,Manual,5
+Renault,KWID 1.0,suv,350000,Petrol,25000,2018,Manual,5
+Honda,Amaze S i-VTEC,sedan,690000,Petrol,1303,2019,Manual,5
+Audi,Q5 35TDI Premium Plus,suv,3975000,Diesel,31800,2018,Automatic,5
+Lexus,ES 300h,sedan,5150000,Petrol,20000,2019,Automatic,5
+Jaguar,XF 2.0 Diesel Portfolio,sedan,3200000,Diesel,45000,2017,Automatic,5
+Jeep,Wrangler 2016-2019 3.6 4X4,suv,4100000,Petrol,17000,2017,Automatic,5
+Land,Rover Discovery Sport TD4 SE,suv,4500000,Diesel,21000,2019,Automatic,7
+Mercedes-Benz,S-Class S 350 CDI,suv,6000000,Diesel,37000,2017,Automatic,5
+BMW,5 Series 520d Sport Line,sedan,3790000,Diesel,29500,2018,Automatic,5
+BMW,X1 sDrive 20D xLine,sedan,2150000,Diesel,27000,2017,Automatic,5
+BMW,X4 M Sport X xDrive20d,sedan,5800000,Diesel,7500,2019,Automatic,5
+Skoda,Superb LK 1.8 TSI AT,sedan,1864999,Petrol,50000,2018,Automatic,5
+Mercedes-Benz,E-Class E250 Edition E,suv,2700000,Diesel,35000,2016,Automatic,5
+MG,Hector Sharp AT BSIV,sedan,1750000,Petrol,19000,2019,Automatic,5
+Honda,City i-VTEC CVT VX,suv,795000,Petrol,41000,2017,Automatic,5
+Toyota,Corolla Altis 1.8 G CVT,sedan,625000,Petrol,39000,2013,Automatic,5
+Volvo,XC40 D4 R-Design,sedan,3400000,Diesel,22000,2018,Automatic,5
+Audi,Q7 35 TDI Quattro Premium,suv,2650000,Diesel,53000,2015,Automatic,7
+Mercedes-Benz,S-Class S 350 CDI,suv,5850000,Diesel,47000,2017,Automatic,5
+BMW,5 Series 523i,suv,975000,Petrol,72200,2010,Automatic,5
+Hyundai,Elantra S,sedan,805000,Petrol,49900,2016,Manual,5
+Jaguar,XE 2016-2019 2.0L Diesel Prestige,sedan,2625000,Diesel,9000,2017,Automatic,5
+Tata,Nexon 1.2 Revotron XZ Plus Dual Tone,sedan,811000,Petrol,11000,2018,Manual,5
+Volkswagen,Vento Petrol Highline,sedan,375000,Petrol,49000,2011,Manual,5
+Hyundai,Elantra SX,suv,550000,Petrol,95000,2012,Manual,5
+Mercedes-Benz,CLA 200 CGI Sport,sedan,2550000,Petrol,18000,2018,Automatic,5
+Maruti,Ertiga ZXI,suv,599000,Petrol,46100,2014,Manual,7
+Honda,City V AT,sedan,875000,Petrol,18000,2017,Automatic,5
+Toyota,Glanza V CVT,sedan,894999,Petrol,9654,2019,Automatic,5
+Toyota,Innova Crysta 2.8 ZX AT BSIV,suv,1525000,Diesel,42163,2016,Automatic,7
+BMW,3 Series 320d Luxury Line,suv,2150000,Diesel,30000,2016,Automatic,5
+Toyota,Camry 2.5 Hybrid,suv,1900000,Petrol,41000,2016,Automatic,5
+BMW,5 Series 520d Luxury Line,sedan,2900000,Diesel,12000,2016,Automatic,5
+Toyota,Camry W4 (AT),sedan,450000,Petrol,71000,2009,Automatic,5
+Volvo,XC90 T8 Excellence BSIV,sedan,10000000,Petrol,30000,2017,Automatic,4
+Volkswagen,Vento Diesel Highline,sedan,300000,Diesel,100000,2011,Manual,5
+Ford,Figo Aspire 1.2 Ti-VCT Trend,suv,575000,Petrol,9500,2018,Manual,5
+Ford,Figo Diesel LXI,sedan,160000,Diesel,120000,2011,Manual,5
+Maruti,Swift VXI Optional,suv,515000,Petrol,36600,2015,Manual,5
+Maruti,Wagon R AMT VXI,sedan,390000,Petrol,50000,2015,Automatic,5
+Hyundai,i20 Magna 1.2,sedan,550000,Petrol,14000,2016,Manual,5
+Hyundai,Grand i10 Magna,suv,425000,Petrol,70000,2015,Manual,5
+Volkswagen,Ameo 1.0 MPI Trendline,suv,480000,Petrol,13000,2019,Manual,5
+Toyota,Corolla Altis Diesel D4DG,suv,300000,Diesel,60000,2010,Manual,5
+Daewoo,Matiz SD,sedan,100000,Petrol,60000,2000,Manual,5
+Toyota,Fortuner 4x2 Manual,sedan,1750000,Diesel,30000,2014,Manual,7
+Mahindra,KUV 100 mFALCON G80 K8,sedan,450000,Petrol,15000,2016,Manual,6
+Tata,Zest Quadrajet 1.3 75PS XM,sedan,490000,Diesel,90000,2017,Manual,5
+Hyundai,Verna Transform SX VTVT,suv,320000,Petrol,100000,2010,Manual,5
+Honda,City i VTEC S,sedan,600000,Petrol,50000,2015,Manual,5
+Honda,Brio S MT,suv,290000,Petrol,60000,2014,Manual,5
+Renault,KWID RXT,sedan,335000,Petrol,30000,2018,Manual,
+Maruti,Swift Ldi BSIII,sedan,170000,Diesel,120000,2008,Manual,5
+Nissan,Micra Diesel XV,suv,275000,Diesel,45000,2011,Manual,5
+Ford,Figo Diesel Titanium,suv,170000,Diesel,90000,2010,Manual,5
+Hyundai,Creta 1.6 CRDi AT SX Plus,suv,1100000,Diesel,67000,2017,Automatic,5
+Datsun,GO T Option BSIV,sedan,335000,Petrol,40000,2016,Manual,5
+Toyota,Fortuner 2.8 2WD MT BSIV,sedan,3000000,Diesel,35000,2018,Manual,7
+Honda,Brio 1.2 VX MT,sedan,325000,Petrol,40000,2012,Manual,5
+Nissan,Sunny XV Special Edition,sedan,450000,Petrol,9000,2012,Manual,5
+Hyundai,i10 Sportz,suv,215000,Petrol,60000,2009,Manual,5
+Mahindra,XUV500 W8 2WD,sedan,680000,Diesel,93000,2012,Manual,7
+Tata,Indigo CS eGLX BS IV,suv,150000,Petrol,50000,2011,Manual,5
+Mercedes-Benz,New C-Class 220 CDI AT,sedan,1550000,Diesel,25000,2013,Automatic,5
+Volkswagen,GTI 1.8 TSI,sedan,800000,Petrol,70000,2016,Automatic,5
+Jaguar,XE 2016-2019 2.0L Diesel Prestige,suv,2625000,Diesel,9000,2017,Automatic,5
+Lexus,ES 300h,suv,5150000,Petrol,20000,2019,Automatic,5
+Jaguar,XF 2.0 Diesel Portfolio,suv,3200000,Diesel,45000,2017,Automatic,5
+Volvo,XC40 D4 Inscription BSIV,sedan,3800000,Diesel,20000,2019,Automatic,5
+Toyota,Camry 2.5 Hybrid,sedan,2000000,Petrol,68089,2016,Automatic,5
+Maruti,Baleno Alpha 1.3,sedan,740000,Diesel,38817,2018,Manual,5
+Honda,Jazz VX,sedan,550000,Petrol,56494,2016,Manual,5
+Maruti,Swift AMT VVT VXI,suv,650000,Petrol,5621,2019,Automatic,5
+Toyota,Etios VX,sedan,625000,Petrol,25538,2017,Manual,5
+BMW,X4 M Sport X xDrive20d,suv,5400000,Diesel,7500,2019,Automatic,5
+BMW,X4 M Sport X xDrive20d,sedan,5500000,Diesel,8500,2019,Automatic,5
+Honda,Amaze V CVT Petrol BSIV,sedan,779000,Petrol,7032,2019,Automatic,5
+Volvo,V40 D3 R-Design,suv,2475000,Diesel,2000,2018,Automatic,5
+Hyundai,i10 Magna,suv,150000,Petrol,106000,2010,Manual,5
+Toyota,Etios Liva Diesel TRD Sportivo,suv,265000,Diesel,162000,2012,Manual,5
+Maruti,Swift Dzire VDI,sedan,480000,Diesel,90000,2015,Manual,5
+Hyundai,Verna 1.6 SX CRDi (O),sedan,535000,Diesel,70000,2014,Manual,5
+Toyota,Innova 2.5 G1 Diesel 8-seater,sedan,250000,Diesel,240000,2005,Manual,8
+Hyundai,Verna XXi ABS (Petrol),sedan,340000,Petrol,214000,2009,Manual,5
+Hyundai,Verna CRDi SX,suv,340000,Diesel,214000,2009,Manual,5
+Honda,City i-VTEC CVT V,sedan,1085000,Petrol,1000,2018,Automatic,5
+Maruti,Swift Dzire AMT VDI,suv,750000,Diesel,19000,2017,Automatic,5
+Maruti,Eeco CNG 5 Seater AC,sedan,409999,CNG,35000,2020,Manual,5
+Maruti,Alto K10 VXI,sedan,215000,Petrol,80000,2014,Manual,5
+Maruti,Alto K10 LXI,suv,150000,Petrol,80000,2010,Manual,5
+Hyundai,EON Sportz,suv,219000,Petrol,50000,2013,Manual,5
+Maruti,Eeco Smiles 5 Seater AC,suv,260000,Petrol,120000,2013,Manual,5
+Jaguar,XE 2016-2019 2.0L Diesel Prestige,sedan,2625000,Diesel,9000,2017,Automatic,5
+Lexus,ES 300h,sedan,5150000,Petrol,20000,2019,Automatic,5
+Jaguar,XF 2.0 Diesel Portfolio,sedan,3200000,Diesel,45000,2017,Automatic,5
+Volvo,XC40 D4 Inscription BSIV,sedan,3800000,Diesel,20000,2019,Automatic,5
+BMW,X4 M Sport X xDrive20d,suv,5400000,Diesel,7500,2019,Automatic,5
+BMW,X4 M Sport X xDrive20d,sedan,5500000,Diesel,8500,2019,Automatic,5
+Volvo,V40 D3 R-Design,suv,2475000,Diesel,2000,2018,Automatic,5
+Ford,Figo 1.2P Titanium Plus MT,sedan,550000,Petrol,44000,2016,Manual,5
+Maruti,Celerio ZXI,sedan,385000,Petrol,25000,2014,Manual,5
+Hyundai,Creta 1.6 VTVT S,suv,800000,Petrol,25000,2016,Manual,5
+Maruti,Swift Dzire VXI 1.2,suv,675000,Petrol,10000,2019,Manual,5
+Tata,Hexa XT,suv,1525000,Diesel,50000,2018,Manual,7
+Ford,EcoSport 1.5 Diesel Titanium Plus BSIV,sedan,950000,Diesel,30000,2018,Manual,5
+Hyundai,i20 Active 1.4 SX with AVN,sedan,610000,Diesel,50000,2015,Manual,5
+Hyundai,i20 Asta 1.4 CRDi,sedan,525000,Diesel,120000,2012,Manual,5
+Honda,Amaze S CVT Diesel BSIV,sedan,700000,Diesel,40000,2019,Automatic,5
+Mahindra,Bolero 2011-2019 SLE,suv,375000,Diesel,80000,2015,Manual,7
+Nissan,Terrano XL Plus 85 PS,sedan,580000,Diesel,90000,2015,Manual,5
+Maruti,Swift VXI Windsong Limited edition,suv,434999,Petrol,50000,2015,Manual,5
+Datsun,RediGO 1.0 S,sedan,350000,Petrol,2136,2020,Manual,5
+Toyota,Innova 2.5 G (Diesel) 7 Seater,sedan,730000,Diesel,250000,2012,Manual,7
+Hyundai,i20 Magna 1.2,suv,600000,Petrol,35000,2015,Manual,5
+Toyota,Innova 2.5 VX (Diesel) 7 Seater,suv,1050000,Diesel,120000,2015,Manual,7
+Maruti,Baleno Alpha 1.3,suv,735000,Diesel,70000,2017,Manual,5
+Renault,Duster 110PS Diesel RxZ,sedan,1050000,Diesel,18000,2018,Manual,5
+Chevrolet,Enjoy 1.3 TCDi LS 7,sedan,420000,Diesel,110000,2016,Manual,7
+Maruti,SX4 S Cross 2015-2017 DDiS 200 Zeta,sedan,800000,Diesel,60000,2017,Manual,5
+Toyota,Fortuner 4x2 AT,sedan,2000000,Diesel,60000,2015,Automatic,7
+Maruti,Swift Dzire VDI,suv,600000,Diesel,147000,2016,Manual,5
+Toyota,Fortuner 4x2 AT,sedan,1900000,Diesel,130000,2015,Automatic,7
+Chevrolet,Captiva LT,suv,500000,Diesel,99500,2011,Manual,7
+Tata,Indica Vista Aqua 1.4 TDI,sedan,200000,Diesel,110000,2011,Manual,5
+Nissan,Micra Active XL Petrol,sedan,370000,Petrol,35000,2016,Manual,5
+Hyundai,Verna Transform CRDi VGT SX ABS,suv,260000,Diesel,110000,2010,Manual,5
+Mahindra,KUV 100 mFALCON D75 K8,suv,280000,Diesel,100000,2016,Manual,6
+Maruti,Ertiga VXI,suv,610000,Petrol,21000,2014,Manual,7
+Ford,Fiesta Titanium 1.5 TDCi,sedan,300000,Diesel,60000,2013,Manual,5
+Tata,Indigo CS LX DiCOR,sedan,140000,Diesel,40000,2010,Manual,5
+Hyundai,i10 Magna 1.1L,sedan,229999,Petrol,50000,2008,Manual,5
+Maruti,A-Star Vxi,sedan,200000,Petrol,65000,2010,Manual,5
+Maruti,Wagon R VXI BSIII,suv,200000,Petrol,80000,2011,Manual,5
+Hyundai,Verna 1.6 CRDi S,sedan,560000,Diesel,119000,2015,Manual,5
+Maruti,Ertiga SHVS VDI,suv,750000,Diesel,80000,2016,Manual,7
+Maruti,Swift VDI BSIV,sedan,585000,Diesel,90000,2017,Manual,5
+Hyundai,Verna 1.6 VTVT S Option,sedan,760000,Petrol,20000,2016,Manual,5
+Maruti,Swift VDI BSIV,suv,430000,Diesel,80000,2014,Manual,5
+Mahindra,KUV 100 D75 K6 Plus,suv,480000,Diesel,44665,2020,Manual,6
+Kia,Seltos HTE D,suv,643000,Diesel,10000,2019,Manual,5
+Hyundai,Xcent 1.2 VTVT S,sedan,500000,Petrol,60000,2018,Manual,5
+Honda,Brio 1.2 S MT,sedan,425000,Petrol,22000,2016,Manual,5
+Maruti,Alto 800 LXI,sedan,250000,Petrol,25000,2014,Manual,5
+Maruti,Celerio LDi,sedan,285000,Diesel,70000,2016,Manual,5
+Maruti,Swift Dzire VXi,suv,160000,Petrol,123000,2008,Manual,5
+Volkswagen,Vento Diesel Trendline,sedan,250000,Diesel,70000,2011,Manual,5
+Chevrolet,Beat LS,suv,170000,Petrol,70000,2013,Manual,5
+Toyota,Etios Liva GD,sedan,409999,Diesel,45000,2013,Manual,5
+Hyundai,Grand i10 AT Asta,sedan,400000,Petrol,40000,2015,Automatic,5
+Maruti,Swift Dzire VDI,suv,700000,Diesel,30000,2019,Manual,5
+Honda,Civic 1.8 V AT,suv,350000,Petrol,90000,2007,Automatic,5
+Maruti,Ertiga BSIV VXI,suv,660000,Petrol,34000,2016,Manual,7
+Maruti,Alto 800 VXI,sedan,268000,Petrol,25000,2017,Manual,5
+Maruti,Alto 800 VXI,sedan,270000,Petrol,50000,2016,Manual,5
+Chevrolet,Beat Diesel LT,sedan,300000,Diesel,50000,2013,Manual,5
+Tata,Tiago 1.2 Revotron XZ,sedan,450000,Petrol,90000,2017,Manual,5
+Chevrolet,Beat Diesel LT,suv,220000,Diesel,70000,2012,Manual,5
