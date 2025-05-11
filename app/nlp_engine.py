@@ -4,11 +4,14 @@ import spacy
 import difflib
 import streamlit as st
 
+# Load the spaCy model
 nlp = spacy.load("en_core_web_sm")
 
+# Load intents
 with open("data/intents.json", "r", encoding="utf-8") as file:
     intents = json.load(file)["intents"]
 
+# Known data
 CAR_BRANDS = ["Toyota", "Honda", "Ford", "BMW", "Tesla", "Hyundai", "Nissan", "Chevrolet", "Kia"]
 CAR_TYPES = ["SUV", "Sedan", "Hatchback", "Truck", "Coupe", "Convertible"]
 FUEL_TYPES = ["petrol", "diesel", "electric", "hybrid"]
@@ -32,6 +35,7 @@ def extract_entities(text):
     text_lower = text.lower()
     entities = {}
 
+    # Budget detection
     if "under" in text_lower or "less than" in text_lower:
         match = re.search(r"(\d{1,3})(k|K)", text_lower)
         if match:
@@ -60,9 +64,12 @@ def extract_entities(text):
             except:
                 pass
         elif ent.label_ == "DATE" and "20" in ent.text:
-            match = re.search(r'20\d{2}', ent.text)
-            if match:
-                entities["year"] = int(match.group())
+            try:
+                year_match = re.search(r'20\d{2}', ent.text)
+                if year_match:
+                    entities["year"] = int(year_match.group())
+            except:
+                pass
 
     for word in text_lower.split():
         if "brand" not in entities:
@@ -99,11 +106,11 @@ def match_intent(text):
 
     synonyms = {
         "budget_filter": ["cheap", "affordable", "under", "less than", "over", "more than", "cost"],
-        "car_recommendation": ["recommend", "suggest", "what car", "good car", "show cars", "need a car"],
+        "car_recommendation": ["recommend", "suggest", "what car", "good car", "which car", "find car"],
         "thanks": ["thanks", "thank you", "ok", "cool", "cheers"],
         "dealer_query": ["dealer", "where to buy", "showroom"],
-        "compare_cars": ["compare", "versus", "vs", "difference"],
-        "greeting": ["hi", "hello", "hey", "good morning"]
+        "compare_cars": ["compare", "versus", "vs", "difference", "side-by-side"],
+        "greeting": ["hi", "hello", "hey", "good morning", "hii", "helloo"]
     }
 
     for intent in intents:
@@ -114,9 +121,10 @@ def match_intent(text):
                 highest_score = score
 
         for syn_intent, syn_list in synonyms.items():
-            if syn_intent == intent["tag"] and any(word in text for word in syn_list):
-                highest_score += 0.3
-                best_match = intent
+            if syn_intent == intent["tag"]:
+                if any(word in text for word in syn_list):
+                    highest_score += 0.3
+                    best_match = intent
 
     return best_match
 
@@ -126,24 +134,21 @@ def process_input(user_input):
     if "chat_context" not in st.session_state:
         st.session_state.chat_context = {}
 
-    for key in ["brand", "type", "fuel", "budget", "max_budget", "min_budget"]:
+    for key in ["brand", "type", "fuel", "budget", "max_budget", "min_budget", "model", "model2"]:
         if key not in entities and key in st.session_state.chat_context:
             entities[key] = st.session_state.chat_context[key]
 
-    for key in ["brand", "type", "fuel", "budget", "max_budget", "min_budget"]:
-        if key in entities:
-            st.session_state.chat_context[key] = entities[key]
+    for key in entities:
+        st.session_state.chat_context[key] = entities[key]
 
     intent = match_intent(user_input)
-    intent = match_intent(user_input)
 
-# Smart override logic
-    if "brand" in entities:
-        intent = {"tag": "brand_query", "responses": ["Here are some models from that brand:"]}
-    elif "type" in entities:
-        intent = {"tag": "car_type_query", "responses": ["Looking up cars in that category..."]}
-    elif "fuel" in entities or "transmission" in entities or "seats" in entities:
-        intent = {"tag": "car_features_filter", "responses": ["Let me find cars that match those features..."]}
+    # Manual pattern for comparing models
+    if "compare" in user_input.lower() and " and " in user_input.lower():
+        models = user_input.lower().split("compare")[-1].strip().split(" and ")
+        if len(models) == 2:
+            entities["model"], entities["model2"] = models[0].strip().title(), models[1].strip().title()
+            intent = {"tag": "compare_cars", "responses": ["Here’s a quick side-by-side:"]}
 
     return {
         "intent": intent["tag"],

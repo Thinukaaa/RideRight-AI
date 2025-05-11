@@ -9,6 +9,7 @@ from app.db_queries import (
     get_user_preference
 )
 
+
 def format_car(car):
     brand = car[0] or "Unknown"
     model = car[1] or "Unknown"
@@ -30,25 +31,28 @@ def format_car(car):
 </details>
 """
 
+
 def summarize_filters(filters):
+    # No longer used in UI title
     summary = []
     if filters.get("brand"):
-        summary.append(f"brand = {filters['brand']}")
+        summary.append(f"{filters['brand']}")
     if filters.get("car_type"):
-        summary.append(f"type = {filters['car_type']}")
+        summary.append(f"{filters['car_type']}")
     if filters.get("fuel_type"):
-        summary.append(f"fuel = {filters['fuel_type']}")
+        summary.append(f"{filters['fuel_type']}")
     if filters.get("transmission"):
-        summary.append(f"transmission = {filters['transmission']}")
+        summary.append(f"{filters['transmission']}")
     if filters.get("seats"):
-        summary.append(f"seats = {filters['seats']}")
+        summary.append(f"{filters['seats']} seats")
     if filters.get("budget"):
-        summary.append(f"price ≤ {filters['budget']}")
+        summary.append(f"≤ ${filters['budget']}")
     if filters.get("min_budget"):
-        summary.append(f"price ≥ {filters['min_budget']}")
+        summary.append(f"≥ ${filters['min_budget']}")
     if filters.get("max_budget"):
-        summary.append(f"price ≤ {filters['max_budget']}")
+        summary.append(f"≤ ${filters['max_budget']}")
     return ", ".join(summary)
+
 
 def relaxed_search(entities):
     filters = {
@@ -64,55 +68,48 @@ def relaxed_search(entities):
     results = get_filtered_cars(**filters)
     return results, filters
 
+
 def get_response(intent_data):
     intent = intent_data["intent"]
     entities = intent_data.get("entities", {})
     user_input = intent_data.get("text", "")
 
-    def as_car_cards(results, title=None, filters=None):
+    def as_car_cards(results, title=None):
         return {
             "cards": [format_car(r) for r in results],
-            "title": title,
-            "filters": summarize_filters(filters or {}),
+            "title": title or "Matching Cars",
             "format": "grid"
         }
 
     if intent in ["budget_filter", "car_recommendation"] and any(k in entities for k in ["budget", "min_budget", "max_budget"]):
-        results, used_filters = relaxed_search(entities)
+        results, _ = relaxed_search(entities)
         if results:
-            return as_car_cards(results, "Cars under your budget", used_filters)
-        return "I couldn’t find anything matching those price and feature filters. Want to try adjusting your criteria?"
+            return as_car_cards(results, "Matching Cars")
+        return "No cars matched that request. Want to try relaxing your filters?"
 
     elif intent == "brand_query" and "brand" in entities:
-        results, used_filters = relaxed_search(entities)
+        results, _ = relaxed_search(entities)
         if results:
-            return as_car_cards(results, f"{entities['brand']} Cars", used_filters)
-        return f"I couldn't find {entities['brand']} listings matching those filters right now. Try adjusting the price or type."
+            return as_car_cards(results, f"{entities['brand']} Cars")
+        return f"I couldn't find any {entities['brand']} cars matching your criteria."
 
     elif intent == "car_type_query" and "type" in entities:
-        results, used_filters = relaxed_search(entities)
+        results = get_cars_by_type(entities["type"])
         if results:
-            return as_car_cards(results, f"{entities['type'].capitalize()} Cars", used_filters)
+            formatted = [(brand, model, entities["type"], price, None, None, None) for brand, model, price in results]
+            return as_car_cards(formatted, f"{entities['type'].capitalize()} Cars")
         return f"No {entities['type']}s available at the moment – want to try another type?"
 
-    elif intent == "car_features_filter":
-        results, used_filters = relaxed_search(entities)
-        if results:
-            return as_car_cards(results, "Cars with selected features", used_filters)
-        return "I couldn’t find any cars matching those features. Want to adjust?"
-
-    elif intent == "compare_cars" and "model" in entities and "model2" in entities:
+    elif intent == "compare_cars" and all(k in entities for k in ["model", "model2"]):
         model1, model2 = entities["model"], entities["model2"]
         results = compare_cars(model1, model2)
         if results:
-            return as_car_cards(results, f"Comparison: {model1} vs {model2}")
+            return as_car_cards(results, f"{model1} vs {model2}")
         return f"I couldn’t find enough info to compare {model1} and {model2}."
 
     elif intent == "trade_in_value" and "year" in entities and "mileage" in entities:
-        year = entities["year"]
-        mileage = entities["mileage"]
-        estimate = get_trade_in_estimate("Unknown", year, mileage)
-        return f"Based on that, I’d estimate your trade-in value around ${estimate}."
+        estimate = get_trade_in_estimate("Unknown", entities["year"], entities["mileage"])
+        return f"Based on that, I’d estimate your trade-in value around ${estimate:,}."
 
     elif intent == "dealer_query" and "brand" in entities:
         brand = entities["brand"]
@@ -122,7 +119,7 @@ def get_response(intent_data):
                 f"🏢 <b>{name}</b> — {location} (📞 {contact})"
                 for name, location, contact in dealers
             )
-        return f"I couldn't locate any {brand} dealers at the moment."
+        return f"No dealers found for {brand}."
 
     elif intent == "save_preference":
         user_id = "demo_user"
@@ -133,7 +130,7 @@ def get_response(intent_data):
             entities.get("budget", 0),
             entities.get("fuel", "Any")
         )
-        return "I’ve saved your preferences. I’ll remember them for next time!"
+        return "Your preferences have been saved. I'll use them to personalize future recommendations."
 
     elif intent == "show_preferences":
         user_id = "demo_user"
@@ -146,6 +143,7 @@ def get_response(intent_data):
 • Fuel: {pref[3]}"""
         return "Looks like I don’t have anything saved for you yet!"
 
+    # Static intent fallback handler
     elif intent in [
         "creator_info", "bot_identity", "wellbeing", "joke", "thanks", "goodbye",
         "unknown", "bot_capabilities", "repeat_request", "clarification",
@@ -153,4 +151,4 @@ def get_response(intent_data):
     ]:
         return intent_data["response"]
 
-    return intent_data['response']
+    return intent_data["response"]
