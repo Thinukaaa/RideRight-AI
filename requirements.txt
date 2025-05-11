@@ -1,0 +1,17 @@
+spacy
+sqlite3
+nltk
+streamlit
+pyinstaller
+pandas
+numpy
+beautifulsoup4
+requests
+lxml
+pillow
+scikit-learn
+matplotlib
+seaborn
+flask
+pytest
+

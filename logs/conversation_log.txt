@@ -1,0 +1,41 @@
+[2025-04-25 01:17:56] User: Show me cars under 25000
+[2025-04-25 01:17:56] Raya: Got a budget in mind? I’ll work within it.
+
+[2025-04-25 01:18:06] User: 30000
+[2025-04-25 01:18:06] Raya: Sorry, I didn’t get that. Can you rephrase? (Let me know if you'd like help choosing a car!)
+
+[2025-04-25 01:18:16] User: Any SUVs available?
+[2025-04-25 01:18:16] Raya: Here’s what I found in the SUV category:
+Ford Escape - $29000
+BMW X3 - $45000
+
+[2025-04-25 01:18:33] User: My 2016 car with 85000 miles
+[2025-04-25 01:18:33] Raya: Sure! What's your budget and preferred brand? (Let me know if you'd like help choosing a car!)
+
+[2025-04-25 01:18:44] User: bmw
+[2025-04-25 01:18:44] Raya: Sorry, I didn’t get that. Can you rephrase? (Let me know if you'd like help choosing a car!)
+
+[2025-04-25 01:18:51] User: Bmw
+[2025-04-25 01:18:51] Raya: Sorry, I didn’t get that. Can you rephrase? (Let me know if you'd like help choosing a car!)
+
+[2025-04-25 01:20:10] User: Show my preferences
+[2025-04-25 01:20:10] Raya: Looks like I don’t have anything saved for you yet!
+
+[2025-04-25 01:20:19] User: Who made you?
+[2025-04-25 01:20:19] Raya: I was built by a final-year software engineering student using AI! Pretty cool, right? (Let me know if you'd like help choosing a car!)
+
+[2025-04-25 01:21:15] User: How are you?
+[2025-04-25 01:21:15] Raya: Hello! Ready to find the perfect car? (Let me know if you'd like help choosing a car!)
+
+[2025-04-25 01:21:25] User: who are you
+[2025-04-25 01:21:25] Raya: I'm RideRight AI â€“ your smart car-buying assistant! (Let me know if you'd like help choosing a car!)
+
+[2025-04-25 01:21:47] User: Tell me a joke
+[2025-04-25 01:21:47] Raya: Why don't cars ever get tired? Because they come with their own spare tire! ðŸ˜„ (Let me know if you'd like help choosing a car!)
+
+[2025-04-25 01:21:57] User: Thanks
+[2025-04-25 01:21:57] Raya: You're welcome! (Let me know if you'd like help choosing a car!)
+
+[2025-04-25 01:25:18] User: exit
+[2025-04-25 01:25:18] Raya: Thanks for chatting with me today! 🚘 Wishing you smooth drives and smart buys!
+
